@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: gamebox
+    environment:
+      POSTGRES_DB: gamebox
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5433"
+    restart: always
